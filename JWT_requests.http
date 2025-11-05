@@ -1,0 +1,26 @@
+POST http://127.0.0.1:8000/auth/users/
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "change_me"
+}
+###
+
+POST http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "change_me"
+}
+###
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjM2MjQyNywiaWF0IjoxNzYyMjc2MDI3LCJqdGkiOiI2ZmM0MTJiNDhjZGI0NWE2YTY0ODc4NDEyMzI2ZjJhMyIsInVzZXJfaWQiOiIxIn0.OSX2a3-DuK8UuJrb6k8MmnenBhHkhLVlZvNuA2gJt5I",
+  "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzYyNDI3LCJpYXQiOjE3NjIyNzYwMjcsImp0aSI6IjI0Zjc5MmU2YWRiODQ4MjdiOGFjYmJjNzk4MWM4YWY1IiwidXNlcl9pZCI6IjEifQ.Qv1dGngvgNAhj4qIgGKOKI7v9OIc2j2d3cQZBHt1O8E"
+}
+###
+
+GET http://127.0.0.1:8000/cats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjM2MjczMCwiaWF0IjoxNzYyMjc2MzMwLCJqdGkiOiJjNzliM2IzN2E5ZjA0MDQzOTY1Y2M3ZWQ2NDcyNTgyNSIsInVzZXJfaWQiOiIxIn0.9BoFw4StQxY4CBLVQ6SrWxxY4wr8GY0zeuqJY-qdqoY
+

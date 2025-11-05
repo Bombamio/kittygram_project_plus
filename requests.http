@@ -1,0 +1,39 @@
+POST http://127.0.0.1:8000/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "change_me"
+}
+
+###
+
+{
+  "token": "311fd0b0ea626d16604baf4d69621b24b0a4307c"
+}
+
+###
+
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+Authorization: token 311fd0b0ea626d16604baf4d69621b24b0a4307c
+
+{
+    "name": "Толик",
+    "color": "white",
+    "birth_year": 2022,
+    "owner": 1,
+    "achievements": [],
+}
+
+###
+{
+  "cats": "http://127.0.0.1:8000/cats/",
+  "owners": "http://127.0.0.1:8000/owners/",
+  "mycats": "http://127.0.0.1:8000/mycats/"
+}
+###
+
+GET http://127.0.0.1:8000/cats/1/
+Authorization: token 311fd0b0ea626d16604baf4d69621b24b0a4307c
+
